@@ -1,7 +1,7 @@
 import UIKit
 
 final class ContactsViewController: UIViewController {
-    // Conecta este Outlet a la UITableView del storyboard
+   
     @IBOutlet weak var tableView: UITableView!
 
     private var contacts: [Contact] = []
@@ -18,8 +18,7 @@ final class ContactsViewController: UIViewController {
     }
 
     private func setupMenuButton() {
-        // Si agregaste el botón desde el storyboard, puedes ignorar esto.
-        // Si prefieres hacerlo por código:
+       
         let menuButton = UIBarButtonItem(systemItem: .action)
         menuButton.target = self
         menuButton.action = #selector(menuTapped)

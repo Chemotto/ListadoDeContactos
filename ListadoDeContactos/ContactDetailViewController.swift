@@ -1,14 +1,14 @@
 import UIKit
 
 final class ContactDetailViewController: UIViewController {
-    // Conecta estos Outlets en el storyboard
+  
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var nameLabel: UILabel!
     @IBOutlet weak var emailLabel: UILabel!
     @IBOutlet weak var phoneLabel: UILabel!
     @IBOutlet weak var websiteLabel: UILabel!
 
-    // Este será el parámetro recibido desde la lista
+   
     var contact: Contact!
 
     override func viewDidLoad() {
