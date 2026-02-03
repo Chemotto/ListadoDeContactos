@@ -4,4 +4,13 @@
    <FileRef
       location = "self:">
    </FileRef>
+   <FileRef
+      location = "group:Contact 2.swift">
+   </FileRef>
+   <FileRef
+      location = "group:ContactsListViewController.swift">
+   </FileRef>
+   <FileRef
+      location = "group:AddContactViewController.swift">
+   </FileRef>
 </Workspace>

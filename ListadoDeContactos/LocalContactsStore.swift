@@ -9,13 +9,13 @@ final class LocalContactsStore {
         self.fileURL = docs.appendingPathComponent(fileName)
     }
 
-    func load() -> [Contact] {
+    func load() -> [AppContact] {
         if !FileManager.default.fileExists(atPath: fileURL.path) {
             return []
         }
         do {
             let data = try Data(contentsOf: fileURL)
-            let contacts = try JSONDecoder().decode([Contact].self, from: data)
+            let contacts = try JSONDecoder().decode([AppContact].self, from: data)
             return contacts
         } catch {
             print("[LocalContactsStore] Error loading contacts: \(error)")
@@ -23,7 +23,7 @@ final class LocalContactsStore {
         }
     }
 
-    func save(_ contacts: [Contact]) {
+    func save(_ contacts: [AppContact]) {
         queue.async { [fileURL] in
             do {
                 let data = try JSONEncoder().encode(contacts)
